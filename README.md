@@ -1,73 +1,69 @@
+# Escolha do Banco de Dados Relacional
 
-Escolha do Banco de Dados Relacional
+## Objetivo
 
-Objetivo
+Selecionar o banco de dados relacional mais adequado para a aplicação, considerando:
 
-Selecionar o banco de dados relacional mais adequado para a aplicação, levando em conta:
-
-- Compatibilidade com a API 
-- Facilidade de uso e simplicidade na administração;
-- Capacidade de atender às necessidades do sistema com confiabilidade e desempenho;
-- Comunidade ativa e boa documentação.
+- Compatibilidade com as API's;
+- Facilidade de instalação e manutenção;
+- Simplicidade sem comprometer a robustez;
+- Comunidade ativa e documentação acessível.
 
 ---
 
-## opções analisadas: 
+## Banco de Dados Escolhido: **MySQL**
+
+### Por que escolhemos o MySQL?
+
+**Vantagens:**
+
+- Ampla compatibilidade com ORMs e frameworks backend como Sequelize (Node.js) e outros.
+- Fácil de instalar, configurar e manter, o que o torna uma excelente escolha para equipes com diferentes níveis de experiência.
+- Grande comunidade ativa e extensa base de conhecimento.
+- Suporte a replicação, particionamento e outras funcionalidades para aplicações de médio a grande porte.
+- Utilizado amplamente na indústria, inclusive em aplicações de grande escala como WordPress, Facebook e Shopify (MariaDB/MySQL).
+
+**Decisão:**  
+✅ **Escolhido como banco principal da aplicação.**  
+É simples o suficiente para uso imediato e robusto o bastante para suportar a evolução do sistema.
+
+---
+
+## Outras Alternativas Avaliadas
 
 ### 1. **PostgreSQL**
 
 **Vantagens:**
 
-- Totalmente compatível com ORMs populares como Sequelize (Node.js), SQLAlchemy (Python), Hibernate (Java), entre outros.
-- Suporte a tipos avançados de dados como JSON, arrays e enums.
-- Excelente suporte para integridade relacional, constraints e transações.
-- Comunidade ativa e extensa documentação.
-- Escalável e seguro, com recursos robustos como controle de concorrência multiversão (MVCC).
+- Excelente suporte a tipos de dados avançados (como JSONB, arrays, enums).
+- Muito robusto em termos de conformidade com o padrão SQL e integridade transacional.
 
 **Desvantagens:**
 
-- Pode ser um pouco mais complexo de configurar em comparação com bancos mais simples, como SQLite.
+- Requer curva de aprendizado um pouco maior.
+- Administração e configuração mais complexa, especialmente em ambientes menos técnicos.
 
 **Decisão:**  
-✅ **Escolhido como principal banco de dados.**  
-É robusto, moderno e altamente compatível com diferentes stacks de desenvolvimento. Ideal para aplicações que podem crescer e se tornar mais complexas ao longo do tempo.
+❌ **Não escolhido.**  
+Apesar de ser tecnicamente superior em alguns aspectos, optamos por uma solução mais simples e direta para o perfil da aplicação.
 
 ---
 
-### 2. **MySQL**
+### 2. **SQLite**
 
 **Vantagens:**
 
-- Muito utilizado em projetos web tradicionais (LAMP stack).
-- Boa compatibilidade com ferramentas populares e ORMs.
-- Fácil de instalar e administrar.
-- MariaDB, como fork, é 100% compatível com MySQL e tem desenvolvimento aberto.
+- Extremamente leve e fácil de usar.
+- Ideal para prototipagem e testes locais.
 
 **Desvantagens:**
 
-- Recursos mais limitados que o PostgreSQL em alguns aspectos avançados.
-- Suporte a conformidade com o padrão SQL não é tão rigoroso quanto o PostgreSQL.
+- Não recomendado para ambientes multiusuário e aplicações web em produção.
+- Falta de suporte a muitos recursos necessários em produção.
 
 **Decisão:**  
-🟡 **Alternativa viável, mas não escolhida.**  
-Embora seja simples e popular, o PostgreSQL oferece mais vantagens para aplicações modernas que exigem flexibilidade e recursos avançados.
-
----
-
-### 3. **SQLite** 
-**Vantagens:**
-
-- Extremamente leve e simples.
-- Ideal para protótipos, testes ou aplicações locais.
-
-**Desvantagens:**
-
-- Não recomendado para aplicações web com múltiplos usuários simultâneos.
-- Pouco escalável.
-
-**Decisão:**  
-🔴 **Descartado para produção.**  
-Pode ser útil para testes locais ou protótipos, mas não atende à necessidade de um sistema multiusuário em produção.
+❌ **Descartado para produção.**  
+Pode ser útil para protótipos, mas não atende às necessidades da aplicação em produção.
 
 ---
 
@@ -75,8 +71,8 @@ Pode ser útil para testes locais ou protótipos, mas não atende à necessidade
 
 | Banco      | Compatibilidade | Simplicidade | Escalabilidade | Suporte a Recursos Avançados | Escolhido |
 |------------|------------------|---------------|------------------|-------------------------------|-----------|
-| PostgreSQL | ✅ Alta           | ⚠️ Média       | ✅ Alta           | ✅ Excelente                   | ✅ Sim     |
-| MySQL      | ✅ Alta           | ✅ Alta        | ✅ Alta           | ⚠️ Média                      | ❌ Não     |
+| MySQL      | ✅ Alta           | ✅ Alta        | ✅ Alta           | ⚠️ Média                      | ✅ Sim     |
+| PostgreSQL | ✅ Alta           | ⚠️ Média       | ✅ Alta           | ✅ Excelente                   | ❌ Não     |
 | SQLite     | ⚠️ Baixa          | ✅ Muito alta  | ❌ Baixa          | ⚠️ Limitado                   | ❌ Não     |
 
-Portanto, **PostgreSQL** foi a melhor escolha considerando **equilíbrio entre simplicidade, robustez e compatibilidade** com diferentes tecnologias de backend.
+Portanto, **MySQL** foi escolhido por sua **facilidade de uso, ampla adoção no mercado e compatibilidade com a stack da aplicação**, sem comprometer os requisitos essenciais do sistema.
