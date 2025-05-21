@@ -104,3 +104,8 @@ A estrutura do banco foi planejada para:
 | MySQL      | ✅ Alta           | ✅ Alta        | ✅ Alta           | ⚠️ Média             | ✅ Excelente           | ✅ Sim     |
 | PostgreSQL | ✅ Alta           | ⚠️ Média       | ✅ Alta           | ✅ Excelente         | ⚠️ Boa                 | ❌ Não     |
 | SQLite     | ⚠️ Baixa          | ✅ Muito alta  | ❌ Baixa          | ⚠️ Limitado          | ⚠️ Limitada            | ❌ Não     |
+
+
+criado por: Rafael pecorari de Barros
+apresentado por : João Victor de Souza Santos
+                  Rayan Luca Teixeira de Souza
